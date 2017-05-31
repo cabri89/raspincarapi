@@ -9,6 +9,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
   require('./app/routes')(app, {});
-  app.listen(port, () => {
+  app.listen(port, function () {
     console.log('We are live on ' + port);
 });
