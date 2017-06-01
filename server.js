@@ -16,7 +16,7 @@ con.connect(function(err) {
   console.log("Connected!");
 
   require('./app/routes')(app,con, {});
-  app.listen(port, () function {
+  app.listen(port, function() {
     console.log('We are live on ' + port);
   });
 });
