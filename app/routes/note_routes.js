@@ -12,7 +12,13 @@ module.exports = function(app, con) {
 
     app.post('/addstatcar/:uid/:useruid', (req, res) => {
         var datetime = (new Date()).toISOString().substring(0, 10);
-        console.log(req.body);
+        console.log(req.body.temps);
+        console.log('{' + req.body.temps + '}');
+        temps = JSON.parse('{' + req.body.temps + '}');
+
+        for (var temp in temps) {
+            console.log(temps[temp]);
+        }
 
         const uid = req.params.uid;
         const userUid = req.params.useruid;
