@@ -10,7 +10,7 @@ module.exports = function(app, con) {
         });
     });
 
-    app.post('/addstatcar/:uid/:useruid', (req, res) => {
+    app.post('/addstatcar/:uid/:useruid', function(req, res) {
         var datetime = (new Date()).toISOString().substring(0, 10);
         console.log(req.body.temps);
         console.log('{' + req.body.temps + '}');
