@@ -5,7 +5,7 @@ const mysql          = require('mysql');
 const app            = express();
 const db             = require('./config/db');
 
-const port = 8000;
+const port = 8000; //server : 1337
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
